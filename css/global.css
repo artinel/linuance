@@ -1,8 +1,8 @@
 @define-color main #242424;
 @define-color card #353535;
 @define-color widget #484848;
-@define-color widget-hover #404040;
-@define-color widget-active #353535;
+@define-color widget-hover #424242;
+@define-color widget-active #383838;
 @define-color text #EEEEEE;
 @define-color accent #1E88E5;
 @define-color accent-active #0C55C0;
