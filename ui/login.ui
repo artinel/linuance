@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Created with Cambalache 0.16.0 -->
+<interface>
+  <!-- interface-name login.ui -->
+  <requires lib="gtk" version="4.12"/>
+  <object class="GtkWindow" id="window">
+    <property name="css-classes">window</property>
+    <child>
+      <object class="GtkBox">
+        <property name="homogeneous">True</property>
+        <child>
+          <object class="GtkBox">
+            <property name="css-classes">card</property>
+            <property name="homogeneous">True</property>
+            <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkLabel">
+                <property name="css-classes">window-title
+font</property>
+                <property name="justify">fill</property>
+                <property name="label">WELCOME</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkBox">
+                <property name="margin-end">25</property>
+                <property name="margin-start">25</property>
+                <property name="orientation">vertical</property>
+                <property name="spacing">30</property>
+                <child>
+                  <object class="GtkEntry">
+                    <property name="css-classes">font
+entry</property>
+                    <property name="placeholder-text">Username</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkEntry">
+                    <property name="css-classes">font
+entry</property>
+                    <property name="input-purpose">password</property>
+                    <property name="placeholder-text">Password</property>
+                    <property name="visibility">False</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkBox">
+                    <property name="homogeneous">True</property>
+                    <child>
+                      <object class="GtkButton">
+                        <property name="css-classes">font
+button</property>
+                        <property name="label">Register</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkOverlay"/>
+                    </child>
+                    <child>
+                      <object class="GtkOverlay"/>
+                    </child>
+                    <child>
+                      <object class="GtkButton">
+                        <property name="css-classes">font
+button
+button-suggested</property>
+                        <property name="label">Login</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkImage">
+            <property name="file">asset/login_pic.svg</property>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
