@@ -13,6 +13,9 @@ int db_open();//open database
 int db_close();//close database
 void db_init();//init database
 void db_error();//print database errors
+void db_init();//initial database
+int db_user_register(char*, char*);//register user
+int db_user_check_exists(char*);//check if user already exists(0 = exists , 1 = does not exists)
 
 int db_open(){
 	//db_state 1 = Database is open
@@ -32,6 +35,7 @@ int db_open(){
 int db_close(){
 	//check if database is open
 	if(db_state){
+		//sqlite3_close returns 0 when it success to close database and 1 when it fails
 		db_status = sqlite3_close(db);
 		if(db_status)
 			fprintf(stderr, "Couldn't close database : %s\n", sqlite3_errmsg(db));
@@ -57,4 +61,37 @@ void db_init(){
 		db_error();
 		db_close();
 	}
+}
+
+int db_user_check_exists(char *username){
+	int exists = DB_STATE_EXISTS;
+	if(db_open()){
+		sqlite3_stmt *stmt;
+		db_status = sqlite3_prepare_v2(db, DB_QUERY_USER_CHECK_EXISTS, -1, &stmt, 0);
+		sqlite3_bind_text(stmt, 1, username, -1, SQLITE_TRANSIENT);
+		if(sqlite3_step(stmt) != SQLITE_ROW)
+			//if there was not a record then it does not exists
+			exists = DB_STATE_NOT_EXISTS;
+		db_error();
+		sqlite3_finalize(stmt);
+	}
+	return exists;
+}
+
+int db_user_register(char *username, char *password){
+	if(db_open()){
+		if(db_user_check_exists(username) == DB_STATE_NOT_EXISTS){
+			sqlite3_stmt *res;
+			db_status = sqlite3_prepare_v2(db, DB_QUERY_USER_REGISTER, -1, &stmt, 0);
+			sqlite3_bind_text(stmt, 1, username, -1, SQLITE_TRANSIENT);
+			sqlite3_bind_text(stmt, 2, password, -1, SQLITE_TRANSIENT);
+			sqlite3_step(stmt);
+			db_error();
+			sqlite3_finalize(stmt);
+			db_close();
+			return DB_STATE_SUCCESS;
+		}else
+			return DB_STATE_EXISTS;
+	}
+	return DB_STATE_FAIL;
 }

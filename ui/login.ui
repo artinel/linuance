@@ -28,14 +28,14 @@ font</property>
                 <property name="orientation">vertical</property>
                 <property name="spacing">30</property>
                 <child>
-                  <object class="GtkEntry">
+                  <object class="GtkEntry" id="entry_username">
                     <property name="css-classes">font
 entry</property>
                     <property name="placeholder-text">Username</property>
                   </object>
                 </child>
                 <child>
-                  <object class="GtkEntry">
+                  <object class="GtkEntry" id="entry_password">
                     <property name="css-classes">font
 entry</property>
                     <property name="input-purpose">password</property>
@@ -47,7 +47,7 @@ entry</property>
                   <object class="GtkBox">
                     <property name="homogeneous">True</property>
                     <child>
-                      <object class="GtkButton">
+                      <object class="GtkButton" id="btn_register">
                         <property name="css-classes">font
 button</property>
                         <property name="label">Register</property>

@@ -11,10 +11,10 @@
 	(1,4,"GtkBox",None,2,None,None,None,None,None),
 	(1,5,"GtkLabel",None,4,None,None,None,None,None),
 	(1,6,"GtkBox",None,4,None,None,None,1,None),
-	(1,7,"GtkEntry",None,6,None,None,None,None,None),
-	(1,8,"GtkEntry",None,6,None,None,None,1,None),
+	(1,7,"GtkEntry","entry_username",6,None,None,None,None,None),
+	(1,8,"GtkEntry","entry_password",6,None,None,None,1,None),
 	(1,9,"GtkBox",None,6,None,None,None,2,None),
-	(1,10,"GtkButton",None,9,None,None,None,None,None),
+	(1,10,"GtkButton","btn_register",9,None,None,None,None,None),
 	(1,11,"GtkOverlay",None,9,None,None,None,1,None),
 	(1,12,"GtkOverlay",None,9,None,None,None,2,None),
 	(1,13,"GtkButton",None,9,None,None,None,3,None)
