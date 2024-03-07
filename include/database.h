@@ -3,6 +3,7 @@
 
 //define variables
 sqlite3 *db;
+sqlite3_stmt *stmt;
 int db_state = DB_STATE_CLOSE; //for specify the status of database (open or close)
 int db_status; //for holding database return integers
 char *db_sql; //for holding sql queries
@@ -34,8 +35,9 @@ int db_close(){
 		db_status = sqlite3_close(db);
 		if(db_status)
 			fprintf(stderr, "Couldn't close database : %s\n", sqlite3_errmsg(db));
-		else
+		else{
 			db_state = DB_STATE_CLOSE;
+		}
 	}
 	return db_state;
 }
@@ -49,7 +51,8 @@ void db_error(){
 void db_init(){
 	//Open database and check if it was successful (db_state = 1)
 	if(db_open()){
-		//add codes here
+		db_sql = malloc(strlen(DB_QUERY_INIT) + 1);
+		strcpy(db_sql, DB_QUERY_INIT);
 		db_status = sqlite3_exec(db, db_sql, NULL, NULL, &db_err);
 		db_error();
 		db_close();
