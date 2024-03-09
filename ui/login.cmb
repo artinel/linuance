@@ -11,13 +11,15 @@
 	(1,4,"GtkBox",None,2,None,None,None,None,None),
 	(1,5,"GtkLabel",None,4,None,None,None,None,None),
 	(1,6,"GtkBox",None,4,None,None,None,1,None),
-	(1,7,"GtkEntry","entry_username",6,None,None,None,None,None),
-	(1,8,"GtkEntry","entry_password",6,None,None,None,1,None),
-	(1,9,"GtkBox",None,6,None,None,None,2,None),
+	(1,7,"GtkEntry","entry_username",6,None,None,None,1,None),
+	(1,8,"GtkEntry","entry_password",6,None,None,None,3,None),
+	(1,9,"GtkBox",None,6,None,None,None,4,None),
 	(1,10,"GtkButton","btn_register",9,None,None,None,None,None),
 	(1,11,"GtkOverlay",None,9,None,None,None,1,None),
 	(1,12,"GtkOverlay",None,9,None,None,None,2,None),
-	(1,13,"GtkButton",None,9,None,None,None,3,None)
+	(1,13,"GtkButton",None,9,None,None,None,3,None),
+	(1,14,"GtkLabel","label_username_error",6,None,None,None,None,None),
+	(1,15,"GtkLabel","label_password_error",6,None,None,None,2,None)
   </object>
   <object_property>
 	(1,1,"GtkWidget","css-classes","window",None,None,None,None,None,None,None,None,None),
@@ -29,20 +31,31 @@
 	(1,5,"GtkLabel","justify","fill",None,None,None,None,None,None,None,None,None),
 	(1,5,"GtkLabel","label","WELCOME",None,None,None,None,None,None,None,None,None),
 	(1,5,"GtkWidget","css-classes","window-title\nfont",None,None,None,None,None,None,None,None,None),
-	(1,6,"GtkBox","spacing","30",None,None,None,None,None,None,None,None,None),
 	(1,6,"GtkOrientable","orientation","vertical",None,None,None,None,None,None,None,None,None),
 	(1,6,"GtkWidget","margin-end","25",None,None,None,None,None,None,None,None,None),
 	(1,6,"GtkWidget","margin-start","25",None,None,None,None,None,None,None,None,None),
 	(1,7,"GtkEntry","placeholder-text","Username",None,None,None,None,None,None,None,None,None),
 	(1,7,"GtkWidget","css-classes","font\nentry",None,None,None,None,None,None,None,None,None),
+	(1,7,"GtkWidget","margin-bottom","30",None,None,None,None,None,None,None,None,None),
 	(1,8,"GtkEntry","input-purpose","password",None,None,None,None,None,None,None,None,None),
 	(1,8,"GtkEntry","placeholder-text","Password",None,None,None,None,None,None,None,None,None),
 	(1,8,"GtkEntry","visibility","False",None,None,None,None,None,None,None,None,None),
 	(1,8,"GtkWidget","css-classes","font\nentry",None,None,None,None,None,None,None,None,None),
 	(1,9,"GtkBox","homogeneous","True",None,None,None,None,None,None,None,None,None),
+	(1,9,"GtkWidget","margin-top","30",None,None,None,None,None,None,None,None,None),
 	(1,10,"GtkButton","label","Register",None,None,None,None,None,None,None,None,None),
 	(1,10,"GtkWidget","css-classes","font\nbutton",None,None,None,None,None,None,None,None,None),
 	(1,13,"GtkButton","label","Login",None,None,None,None,None,None,None,None,None),
-	(1,13,"GtkWidget","css-classes","font\nbutton\nbutton-suggested",None,None,None,None,None,None,None,None,None)
+	(1,13,"GtkWidget","css-classes","font\nbutton\nbutton-suggested",None,None,None,None,None,None,None,None,None),
+	(1,14,"GtkLabel","label","Test text",None,None,None,None,None,None,None,None,None),
+	(1,14,"GtkWidget","css-classes","text-error\nfont",None,None,None,None,None,None,None,None,None),
+	(1,14,"GtkWidget","halign","start",None,None,None,None,None,None,None,None,None),
+	(1,14,"GtkWidget","margin-bottom","7",None,None,None,None,None,None,None,None,None),
+	(1,14,"GtkWidget","visible","False",None,None,None,None,None,None,None,None,None),
+	(1,15,"GtkLabel","label","Test text",None,None,None,None,None,None,None,None,None),
+	(1,15,"GtkWidget","css-classes","font\ntext-error",None,None,None,None,None,None,None,None,None),
+	(1,15,"GtkWidget","halign","start",None,None,None,None,None,None,None,None,None),
+	(1,15,"GtkWidget","margin-bottom","7",None,None,None,None,None,None,None,None,None),
+	(1,15,"GtkWidget","visible","False",None,None,None,None,None,None,None,None,None)
   </object_property>
 </cambalache-project>

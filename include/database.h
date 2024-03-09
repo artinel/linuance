@@ -14,8 +14,8 @@ int db_close();//close database
 void db_init();//init database
 void db_error();//print database errors
 void db_init();//initial database
-int db_user_register(char*, char*);//register user
-int db_user_check_exists(char*);//check if user already exists(0 = exists , 1 = does not exists)
+int db_user_register(const char*, const char*);//register user
+int db_user_check_exists(const char*);//check if user already exists(0 = exists , 1 = does not exists)
 
 int db_open(){
 	//db_state 1 = Database is open
@@ -63,7 +63,7 @@ void db_init(){
 	}
 }
 
-int db_user_check_exists(char *username){
+int db_user_check_exists(const char *username){
 	int exists = DB_STATE_EXISTS;
 	if(db_open()){
 		sqlite3_stmt *stmt;
@@ -78,7 +78,7 @@ int db_user_check_exists(char *username){
 	return exists;
 }
 
-int db_user_register(char *username, char *password){
+int db_user_register(const char *username, const char *password){
 	if(db_open()){
 		if(db_user_check_exists(username) == DB_STATE_NOT_EXISTS){
 			sqlite3_stmt *res;

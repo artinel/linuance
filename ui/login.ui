@@ -26,12 +26,32 @@ font</property>
                 <property name="margin-end">25</property>
                 <property name="margin-start">25</property>
                 <property name="orientation">vertical</property>
-                <property name="spacing">30</property>
+                <child>
+                  <object class="GtkLabel" id="label_username_error">
+                    <property name="css-classes">text-error
+font</property>
+                    <property name="halign">start</property>
+                    <property name="label">Test text</property>
+                    <property name="margin-bottom">7</property>
+                    <property name="visible">False</property>
+                  </object>
+                </child>
                 <child>
                   <object class="GtkEntry" id="entry_username">
                     <property name="css-classes">font
 entry</property>
+                    <property name="margin-bottom">30</property>
                     <property name="placeholder-text">Username</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label_password_error">
+                    <property name="css-classes">font
+text-error</property>
+                    <property name="halign">start</property>
+                    <property name="label">Test text</property>
+                    <property name="margin-bottom">7</property>
+                    <property name="visible">False</property>
                   </object>
                 </child>
                 <child>
@@ -46,6 +66,7 @@ entry</property>
                 <child>
                   <object class="GtkBox">
                     <property name="homogeneous">True</property>
+                    <property name="margin-top">30</property>
                     <child>
                       <object class="GtkButton" id="btn_register">
                         <property name="css-classes">font

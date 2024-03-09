@@ -7,9 +7,14 @@
 @define-color accent #1E88E5;
 @define-color accent-active #0C55C0;
 @define-color accent-hover #1D66D2;
+@define-color error #D81B63;
 
 .font{
 	font-family: "YaHei Monaco Hybird";
+}
+.text-error{
+	color: @error;
+	font-size: 25px;
 }
 
 .window{
@@ -34,10 +39,13 @@
 	font-size: 25px;
 	border: none;
 	border-radius: 15px;
-	/*TODO fix glitch*/
 	outline-color: @accent;
 	outline-offset: 0px;
 	transition: ease 0.2s;
+}
+.entry-error{
+	outline-color: @error;
+	outline-width: 2px;
 }
 .button{
 	padding: 20px;
